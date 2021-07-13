@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>
+        Lee&#39;s Bento(李的便当)项目介绍 |
+        
+        Vector &amp; Matrix
+    </title>
+    <link rel="shortcut icon" href="/images/2179163.jpg">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":true,"expand_all":true},"style":{"primary_color":"#0066CC","avatar":"/images/b2cf055c65fc2089dc1e9a4ad1a4db80.jpg","favicon":"/images/2179163.jpg","img_position":"left","left_side_width":"260px","content_max_width":"900px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Live a life you will remember."}},"local_search":{"enable":false,"trigger":"auto","unescape":false,"preload":false},"version":"3.0.4"};
+    KEEP.language = {"search":"Search...","prev":"Prev","next":"Next","prev_posts":"Prev posts","next_posts":"Next posts","page":"Page %d","recent_posts":"Recent Posts","share":"Share","powered_by":"Powered by %s","theme":"Theme","rss_feed":"RSS Feed","category":"Category","categories":"Categories","tag":"Tag","tags":"Tags","tagcloud":"Tag Cloud","comment":"Comment","home":"Home","archive":"Archive","archives":"Archives","about":"About","site_uv":"Visitor Count","site_pv":"Totalview","links":"Links","link":"Link","top":"TOP","read_more":"Read more","wordcount":"Words","min2read":"Mins","changelog":"Changelog","copyright":{"author":"Post author","title":"Post title","link":"Post link","create_time":"Create time","license_title":"Copyright Notice","license_content":"All articles in this blog are licensed under %s unless stating additionally."},"ago":{"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"}};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+<div class="page-container">
+
+    
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+        <a class="logo-title" href="/">
+            Vector &amp; Matrix
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        HOME
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories"
+                    >
+                        ARTICLE CATEGORIES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/Me"
+                    >
+                        ABOUT ME
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">ARTICLE CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/Me">ABOUT ME</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Lee&#39;s Bento(李的便当)项目介绍</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/b2cf055c65fc2089dc1e9a4ad1a4db80.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>JiazhengHE</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2021-05-26 12:12:57
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Entrepreneurial-Projects/">Entrepreneurial Projects</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p><strong>注⚠️：以下内容（数据）仅基于2017年末，可能与目前有所出入，仅供参考。</strong></p>
+<h2 id="1-项目介绍"><a href="#1-项目介绍" class="headerlink" title="1.项目介绍"></a>1.项目介绍</h2><h3 id="1-1项目背景"><a href="#1-1项目背景" class="headerlink" title="1.1项目背景"></a>1.1项目背景</h3><p>目前，我国在校大学生已超3000万，高校市场容量大、分布集中且相对封闭的特点，对进入校园市场的品牌推广十分有利。但是另一个方面，相对已进入社会独立生活的消费者，大学生个体的消费能力有限、消费行为有许多不同之处。</p>
+<p>根据《2016中国校园市场发展报告》（以下简称《报告》），2016年全国大学生月均生活费<strong>1423</strong>元，其中，高生活费地区主要集中在北上江浙等发达和东北地区。值得注意的是来自《腾讯事实说》的数据表明，仅在5年前，有接近40%的大学生月生活费不足500元，超过**75%**的大学生生活费在1000元以下。说明大学生的生活费是处于相对稳步上涨趋势的，原因除了物价水平的增高，还有其消费产品种类的改变与多样化。《2016年中国大学生消费结构》显示，三餐占比达到32%，这部分的全国基础消费达到2193亿元。</p>
+<p><img src="/images/WechatIMG132.jpg"></p>
+<p>项目初期以独墅湖高教区为试点，由苏州工业园区管委会打造的独墅湖高教区，截止2017年3月，入住院校20余所，在校大学生人数已达<strong>7.6</strong>万人。</p>
+<p><img src="/images/WechatIMG134.jpg"></p>
+<p>独墅湖高教区入住院校20余所，上图显示的是高教区中心商圈附近的大体量院校。</p>
+<p>校园商圈：文星、文荟及文萃广场，翰林邻里中心。</p>
+<p>文星广场是其中发展最好的，文萃虽然靠近2号线地铁口，硬件设施最好，但文萃宿舍区学生入住率较低，商业广场体量明显大于消费群体，故生意较差。</p>
+<p>苏大采取的是全封闭式管理，宿舍区设置在校内，多个食堂口碑不错。</p>
+<p>人大中法学院在校大学生约2000人，且无校园食堂，学生三餐以附近商业广场和外卖为主。</p>
+<p>西交利物浦大学在校大学生约1万，食堂均价每餐22元，且普遍反映口味一般，根据问卷有78%的学生每天至少会点一次外卖。</p>
+<p>高博国际学院于百年技术学院为高职院校，共计约7000人。</p>
+<p><strong>以《饿了么》外卖平台数据为基础，以高教区校园中心商圈文星广场为原点，辐射5公里范围，对高教区外卖数据进行相关分析：</strong></p>
+<p>5公里范围内645户商家，其中人均价格20-40元之间占52%。</p>
+<p><img src="/images/WechatIMG133.jpg"></p>
+<p>并对户商家进行月销量与人均消费额统计:</p>
+<p><img src="/images/1626184825903.jpg"></p>
+<ul>
+<li>人均消费主要区间集中在20-32元。</li>
+<li>排除新店后，在20-32元消费区间内，商家月销量平均为1527单。</li>
+<li>离群值主要为爆款减脂健康餐和连锁大品牌餐饮。</li>
+</ul>
+<p>同时对周边645家商户中售卖简餐便当的324家店铺经营品类进行分类，数据如下：</p>
+<p><img src="/images/1626184908424.jpg"></p>
+<p>简餐便当以各类特色盖浇饭为主，17.6元左右，月均销量1648单。食材以鸡肉为主，口味多为咸鲜辣香的改良版川菜。其中63%为小品牌外卖加盟店，使用中央厨房生产的成品料理包与小门店简易加工相结合的方式经营；37%为现炒盖浇饭，由于现炒会对其产量有严格限制，故其月均销量低于前者，仅为1103单。</p>
+<p>精品便当占比仅16%，均价27.2元，月均销量1602单，讲究荤素小菜饮料的搭配。便当主题多样化，有减脂增肌、日韩料理、创意西餐等。</p>
+<p><strong>综上所述</strong>：</p>
+<ul>
+<li>用户在每餐消费15-29元之间对价格不敏感，从均价17.6的特色盖浇饭到均价27.2的精品便当销量并没有出现明显的下降趋势，客单价与销量在此区间内边际递减率较低。</li>
+<li>在精品便当类中，可以将市场再次拆分为两个价格区间：其中21-24元以减脂餐，烤鸡类“高端”盖浇饭为主，口味相对统一，消费者认知度较高，月销售稳定，加盟店模式居多。25-29元区间主要以和风为主，食材摆脱了鸡肉，以牛肉，鱼类为主。</li>
+<li>对于精品便当，关键在于高认知度的菜品+合理的价格区间。</li>
+</ul>
+<h3 id="1-2-用户消费行为分析"><a href="#1-2-用户消费行为分析" class="headerlink" title="1.2 用户消费行为分析"></a>1.2 用户消费行为分析</h3><p>个性、新颖：大学生群体消费“前卫”，对新兴产品的接受度远超一般消费者。</p>
+<p>自我意识强：文娱消费潜力正在释放，整体呈现轻度娱乐型消费占据主导的倾向。娱乐型消费的特点是注重精神层面的消费升级，改善性消费。</p>
+<p>感性：容易受身边同学影响，攀比心理导致冲动消费。特别是对情感的追求，会直接刺激物质的消费投入。</p>
+<p>懒：便捷性和随时性，成为左右消费行为的重要因素。</p>
+<p>纯消费者：《报告》显示，93.2%的大学生仍然需要家庭提供生活费，因此对产品和服务的优惠福利会更加关注。</p>
+<h3 id="1-3-项目定位"><a href="#1-3-项目定位" class="headerlink" title="1.3 项目定位"></a>1.3 项目定位</h3><p>本项目旨在打造“新轻食”外卖餐配一体化，通过产品的健康及颜值在年轻群体中取得认同感，尤其是满足年轻女性群体对于生活“仪式感”的追求。不仅在产品品质上区别于一般外卖“小作坊”，在配送上也不同于传统外卖平台依靠骑手连通商家和用户的方式，而是采用订单预定，中央厨房直接完成制作，并由配送车直接配送制人流量集中区域的外卖柜，完成“最后一公里”。</p>
+<h2 id="2-产品介绍"><a href="#2-产品介绍" class="headerlink" title="2. 产品介绍"></a>2. 产品介绍</h2><h3 id="2-1-产品概要"><a href="#2-1-产品概要" class="headerlink" title="2.1 产品概要"></a>2.1 产品概要</h3><p>结合以上背景及消费者行为，本项目将推出两条产品线：</p>
+<p><img src="/images/1626184975960.jpg"></p>
+<p><strong>注⚠️：以下图片均为产品实拍</strong></p>
+<h4 id="2-1-1-日常系列"><a href="#2-1-1-日常系列" class="headerlink" title="2.1.1 日常系列"></a>2.1.1 日常系列</h4><p><img src="/images/1626185073814.jpg"></p>
+<p><strong>产品特点：</strong></p>
+<p>健康：</p>
+<ul>
+<li>遵循少油少盐的原则，严格控制热量，除荤菜外其他配菜均使用水煮或生食的简单烹饪方式</li>
+<li>主食中添加粗粮，均衡膳食</li>
+<li>一荤多素，每份便当添加3-5种素菜不等，种类繁多拒绝单一</li>
+<li>荤菜采用用户认可度较高的改良川菜为主，如粉蒸肉，红烧排骨，咖喱鸡等</li>
+</ul>
+<p><strong>产品定位：</strong></p>
+<p>中端走量款，客单价较低利润较低，其中选取一到两款用户认可度最高的产品作为爆款，配合常年折扣做到薄利多销。</p>
+<p>去精细化：餐品对厨艺要求极低，后期全部可由中央厨房完成。</p>
+<h4 id="2-1-2-品质系列"><a href="#2-1-2-品质系列" class="headerlink" title="2.1.2 品质系列"></a>2.1.2 品质系列</h4><p><img src="/images/1626185230733.jpg"></p>
+<p><img src="/images/1626185295891.jpg"></p>
+<p><img src="/images/1626185346110.jpg"></p>
+<p><strong>产品特点：</strong></p>
+<p>颜值：</p>
+<ul>
+<li>产品呈现形式创新，通过添加可爱饭团使产品自带话题属性。</li>
+<li>产品内容创新，将中式简餐和日式饭团相结合，配合蔬菜沙拉，以“颜值”为基础，兼顾健康。</li>
+</ul>
+<p><strong>产品定位：</strong></p>
+<p>高端推广款：由于卡通饭团的标准化难度较高，采取每日限量供应，以减少成本；且产品自带流量，用户自发传播意愿较强。</p>
+<h3 id="2-2-产品用户定位"><a href="#2-2-产品用户定位" class="headerlink" title="2.2 产品用户定位"></a>2.2 产品用户定位</h3><p>主要用户群体为较为关注食品安全和健康，且对新鲜事物有较高好奇心的在校大学生，在职白领等。前期试错阶段以大学生群体为主，后期主要用户群体以白领群体为主。用户主要消费场景集中在人群较为集中的宿舍，图书馆，写字楼，公寓等。</p>
+<h2 id="3-产品运营"><a href="#3-产品运营" class="headerlink" title="3 产品运营"></a>3 产品运营</h2><p>本产品运营主要为以下两个部分。</p>
+<h3 id="3-1-试错阶段（已完成）"><a href="#3-1-试错阶段（已完成）" class="headerlink" title="3.1 试错阶段（已完成）"></a>3.1 试错阶段（已完成）</h3><p>用户平台：微店：用户下单平台。 微信个人号：活动宣传平台。</p>
+<p>主要用户群体：西交利物浦大学学生</p>
+<p>推广方式：前期通过朋友圈，校内论坛，校园微信群等方式进行第一波活动预热，活动内容为“仅需1元吃午饭”，通过添加微信并转发朋友圈即可参与活动。外卖采用预定制出售，且60%产品为品质系列，40%为日常系列。通过产品“颜值”取得用户好感，同时由于产品自带的话题属性使得用户有自发性推广的意愿（发朋友圈炫耀）。</p>
+<p>一期阶段成就：项目试错累计持续50天，个人微信号累计添加用户4200余人，用户转化率36%，用户总复购率61%，7日内复购率24%。</p>
+<p>一期调研结果：本期样本容量共计504人</p>
+<p><img src="/images/1626185403820.jpg"></p>
+<p>本期调研主要表明以下问题：</p>
+<ol>
+<li>由于本阶段生产能力有限，经常出现供不应求，很多用户因为没有办法“抢”到外卖而放弃下单。</li>
+<li>菜品质量仍需改进，但好吃和健康是完全相悖的两个概念，因此还需要探索用户的平衡点已提升用户体验。</li>
+<li>受访者有67.2%反应对社区手帐等ip文创很感兴趣，且用户主要以女性群体为主，因此在后期可以着重建设社区版块。</li>
+</ol>
+<h3 id="3-2-孵化阶段-（部分实现）"><a href="#3-2-孵化阶段-（部分实现）" class="headerlink" title="3.2 孵化阶段 （部分实现）"></a>3.2 孵化阶段 （部分实现）</h3><p>用户平台：前期与4.1相同，后期以微信支付宝小程序（公众号）为主。</p>
+<p>主要用户群体：独墅湖高教区内大学生</p>
+<p>其中</p>
+<p><strong>公众号二次开发，主要实现以下功能：</strong></p>
+<ul>
+<li>订餐：客户在线下单，选择配送要素；收藏，产品降价后自动通知；产品及折扣页面设置分享按钮，一键朋友圈和微博转发。</li>
+<li>用户管理：会员个人消费数据、等级福利等展示。</li>
+<li>社区：用户可发布手帐等ip文创作品，同时具备收藏，点赞，评论等功能；公众号每周精选高赞藏作品作为推文集合发布。</li>
+<li>用户消费数据统计功能：建立客户群组来衡量指标：访问间隔，点击内容等。</li>
+</ul>
+<p><strong>销售方式改变：从传统外卖的随点随吃到预定制转变，将客户分流。</strong></p>
+<p>核心客户：对核心客户采用周订餐方式（客户需在服务号及小程序下单），即一次下单预定一周工作日午饭，外卖采用高低搭配，根据价格可选择每周1至2顿品质系列，其他为日常系列。用户仅需要标注忌口即可，免去选择困难的烦恼。</p>
+<p>新客户与非核心客户：走传统外卖平台，品质系列限量供应，日常系列每周选取一两款打折。</p>
+<p><strong>配送方式的改变：从点对点到点对面。</strong></p>
+<p>对与核心客户工作日午餐，采用集中配送至人流密集区域恒温外卖柜的方式。</p>
+<p>对于非核心客户依旧采用平台自有外卖骑手进行配送。</p>
+<p>两期累计项目收益：总计收益GMV10W，累计净利润收益3W，单日产品售罄清仓时间记录最短达5min，投放后得到一致好评，用户转化率达20.5%，七日内复购率达18.3%，总复购率达53%。</p>
+<h2 id="4-写在最后"><a href="#4-写在最后" class="headerlink" title="4.写在最后"></a>4.写在最后</h2><p>关于为什么没有做下去，其实还是很现实的原因，没钱。关于外卖柜的想法来源于小区里的社区生鲜品牌“食行生鲜”，冷链柜在17年可以说已经烂大街了，打开阿里巴巴搜恒温柜98%都是冷链柜，好不容易找到一家常熟的工厂可以做热链恒温柜，去参观了一趟谈了下价格还是”打扰了“，毕竟我们3个合伙人在学校旁边租了间100平米的小厂房再买了一堆食品加工设备也就花了不到4万，而当时一台96格的柜子加上后期服务就差不多10万，现实始终是难以跨越的一道鸿沟，况且即使买了柜子，按照二期规划开始的利润，回本也遥遥无期，就像陷入了无底洞，想挣钱就要扩大规模，想扩大规模就要投入，不然怎么说万物起源是“鸡生蛋还是蛋生鸡”问题呢。我始终相信，好的生意都是长期投资的，给自己的“小目标”也很简单，收益率能打败通货膨胀就行了。时至2021，看见学校和宿舍楼下屹立的美团外卖柜，想想自己也有过相同的idea，也在内心为自己小小的自豪了一把，当然我也很清楚，一个idea到落地实施，这中间需要无数的试错，论证，以及良好的后期运营，这中间的环节缺一不可，即使我走对了一步，接下来还有无数个坑等着我。当然这仅仅算是一次勇敢的尝试，其实作为一个大学生，我从来没有把盈利当作第一要义，而是能把想法在自己的能力范围内实现，勇敢的走出去这一步，让自己多感受，多学习，并将其作为一种伴随一生的经历至少是值得的。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Lee&#39;s Bento(李的便当)项目介绍</li>
+        <li>Post author：JiazhengHE</li>
+        <li>Create time：2021-05-26 12:12:57</li>
+        <li>
+            Post link：https://hjeremyz.github.io/2021/05/26/Lee&#39;s Bento(李的便当)项目介绍/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/05/26/ColorFan%E5%8D%A1%E4%B9%90%E6%A2%B5%E7%BE%8E%E5%A6%86%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/"
+                        >
+                            <span class="left arrow-icon flex-center" >
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">ColorFan卡乐梵美妆项目介绍</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/05/26/Java%20this%E5%85%B3%E9%94%AE%E5%AD%97/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java中this关键字的用法</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                    
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span> -
+            
+            2021 <i class="fas fa-heart icon-animate"></i> <a href="/">JiazhengHE</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a class="theme-version" target="_blank"></a>
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+
+        
+
+        <!-- TOC aside toggle -->
+        
+
+    </ul>
+</div>
+
+    </div>
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-top flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="tools-ul-1">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+    </ul>
+</div>
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">1.项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="nav-number">1.1.</span> <span class="nav-text">1.1项目背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%94%A8%E6%88%B7%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 用户消费行为分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E9%A1%B9%E7%9B%AE%E5%AE%9A%E4%BD%8D"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 项目定位</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">2. 产品介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%BA%A7%E5%93%81%E6%A6%82%E8%A6%81"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 产品概要</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-%E6%97%A5%E5%B8%B8%E7%B3%BB%E5%88%97"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 日常系列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E5%93%81%E8%B4%A8%E7%B3%BB%E5%88%97"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 品质系列</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E4%BA%A7%E5%93%81%E7%94%A8%E6%88%B7%E5%AE%9A%E4%BD%8D"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 产品用户定位</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5"><span class="nav-number">3.</span> <span class="nav-text">3 产品运营</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E8%AF%95%E9%94%99%E9%98%B6%E6%AE%B5%EF%BC%88%E5%B7%B2%E5%AE%8C%E6%88%90%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 试错阶段（已完成）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%AD%B5%E5%8C%96%E9%98%B6%E6%AE%B5-%EF%BC%88%E9%83%A8%E5%88%86%E5%AE%9E%E7%8E%B0%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 孵化阶段 （部分实现）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">4.</span> <span class="nav-text">4.写在最后</span></a></li></ol>
+    </div>
+</div>
+        
+    </aside>
+
+    <!-- image viewer -->
+    <div class="image-viewer-container">
+    <div class="img-box">
+        <img src="">
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/left-side-toggle.js"></script>
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/code-copy.js"></script>
+    
+
+    
+
+
+</body>
+</html>

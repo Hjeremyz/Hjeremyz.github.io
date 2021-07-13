@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>
+        常用API |
+        
+        Vector &amp; Matrix
+    </title>
+    <link rel="shortcut icon" href="/images/2179163.jpg">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":true,"expand_all":true},"style":{"primary_color":"#0066CC","avatar":"/images/b2cf055c65fc2089dc1e9a4ad1a4db80.jpg","favicon":"/images/2179163.jpg","img_position":"left","left_side_width":"260px","content_max_width":"900px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Live a life you will remember."}},"local_search":{"enable":false,"trigger":"auto","unescape":false,"preload":false},"version":"3.0.4"};
+    KEEP.language = {"search":"Search...","prev":"Prev","next":"Next","prev_posts":"Prev posts","next_posts":"Next posts","page":"Page %d","recent_posts":"Recent Posts","share":"Share","powered_by":"Powered by %s","theme":"Theme","rss_feed":"RSS Feed","category":"Category","categories":"Categories","tag":"Tag","tags":"Tags","tagcloud":"Tag Cloud","comment":"Comment","home":"Home","archive":"Archive","archives":"Archives","about":"About","site_uv":"Visitor Count","site_pv":"Totalview","links":"Links","link":"Link","top":"TOP","read_more":"Read more","wordcount":"Words","min2read":"Mins","changelog":"Changelog","copyright":{"author":"Post author","title":"Post title","link":"Post link","create_time":"Create time","license_title":"Copyright Notice","license_content":"All articles in this blog are licensed under %s unless stating additionally."},"ago":{"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"}};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+<div class="page-container">
+
+    
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+        <a class="logo-title" href="/">
+            Vector &amp; Matrix
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        HOME
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories"
+                    >
+                        ARTICLE CATEGORIES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/Me"
+                    >
+                        ABOUT ME
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">ARTICLE CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/Me">ABOUT ME</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">常用API</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/b2cf055c65fc2089dc1e9a4ad1a4db80.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>JiazhengHE</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2020-05-26 12:12:57
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/categories/JavaSE/">JavaSE</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h1><p>java中组建的层次结构：Module-&gt;Package-&gt;Class</p>
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><p>属于java.base-&gt;java.lang-&gt;Object</p>
+<p>所有类都是objetc类的对象，所有类都直接或间接继承object类。</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li><h4 id="Object"><a href="#Object" class="headerlink" title="Object()"></a>Object()</h4><p> 构造一个对象。所有的子类对象初始化都会优先调用这个方法</p>
+</li>
+</ul>
+<h3 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h3><ul>
+<li><h4 id="Int-hashCode"><a href="#Int-hashCode" class="headerlink" title="Int hashCode()"></a>Int hashCode()</h4></li>
+</ul>
+<p>​       返回对象的哈希码值，该方法通过对象的地址值进行计算，不同对象的返回值一般不同。</p>
+<ul>
+<li><h4 id="Class-lt-gt-getClass"><a href="#Class-lt-gt-getClass" class="headerlink" title="Class&lt;?&gt; getClass()"></a>Class&lt;?&gt; getClass()</h4></li>
+</ul>
+<p>​     返回调用方法对象的运行时类对象（调用者的字节码文件对象。一个类对应的字节码文件只有一个。</p>
+<ul>
+<li><h4 id="String-toString"><a href="#String-toString" class="headerlink" title="String toString()"></a>String toString()</h4></li>
+</ul>
+<p>​    返回该对象的字符串表示，默认打印地址值。地址值的组成格式：全类名+@+哈希码无符号十六进制</p>
+<ul>
+<li><h4 id="Boolean-equals"><a href="#Boolean-equals" class="headerlink" title="Boolean equals()"></a>Boolean equals()</h4></li>
+</ul>
+<p>​    返回其他狗个地域性是否与此对象相等。默认情况比较两个对象的引用，建议重写。</p>
+<p>注意：java.lang包下的类不用导包直接使用。</p>
+<h2 id="Scanner类"><a href="#Scanner类" class="headerlink" title="Scanner类"></a>Scanner类</h2><p>属于java.base-&gt;java.util-&gt;Scanner-&gt;Scanner(InputStream)</p>
+<h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><p>属于java.base-&gt;java.lang-&gt;String</p>
+<p>简介：字符串，每一个字符串对象都是一个常量。</p>
+<h3 id="构造方法："><a href="#构造方法：" class="headerlink" title="构造方法："></a>构造方法：</h3><ul>
+<li>String(byte[]):构造一个string对象，将指定字节数组中的数据转化成字符串。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">byte</span>[] bts = &#123;<span class="number">97</span>,<span class="number">98</span>,<span class="number">99</span>&#125;;</span><br><span class="line">        String s1 = <span class="keyword">new</span> String(bts);</span><br><span class="line">        System.out.println(s1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>String(char[]):构造一个string对象，将指定字符数组中的数据转化成字符串。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] chs = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;</span><br><span class="line">        String s1 = <span class="keyword">new</span> String(chs);</span><br><span class="line">        System.out.println(s1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="成员方法-1"><a href="#成员方法-1" class="headerlink" title="成员方法"></a>成员方法</h3><h4 id="判断方法"><a href="#判断方法" class="headerlink" title="判断方法"></a>判断方法</h4><ul>
+<li>boolean equals(String)</li>
+<li>boolean eaualsIgnoreCase(String)</li>
+<li>boolean startsWith(String):判断是否以给定字符串开头</li>
+</ul>
+<h4 id="获取方法"><a href="#获取方法" class="headerlink" title="获取方法"></a>获取方法</h4><ul>
+<li>Int length():获取当前字符串长度</li>
+<li>Char charAt(int index):获取指定索引位置的字符</li>
+<li>int IndexOf(String):获取指定字符串第一次出现的索引</li>
+<li>int lastIndexOf(String):获取指定字符串最后一次出现的索引</li>
+<li>String substring(int):截取(获取)指定索引位置(含之后)的字符串</li>
+<li>String substring(int, int):获取从索引start位置到end位置的字符串(左闭右开区间)。</li>
+</ul>
+<h4 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h4><ul>
+<li>Byte[] getBytes():将字符串转换成字节数组</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">        <span class="keyword">byte</span>[] b = s1.getBytes();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;b.length; i++) &#123;</span><br><span class="line">            System.out.println(b[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>char[] toCharArray():将字符串转换成字符数组</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">        <span class="keyword">char</span>[] c1 = s1.toCharArray();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; c1.length; i++) &#123;</span><br><span class="line">            System.out.println(c1[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Static String valueOf(..):将指定类型数据转换成字符串</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = String.valueOf(<span class="number">123</span>);</span><br><span class="line">        <span class="comment">//也可以这样写：</span></span><br><span class="line">        String s2 = <span class="string">&quot;&quot;</span> + <span class="number">123</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>String replace(old, new):将指定字符串替换成新字符串</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = <span class="string">&quot;abc abc abc&quot;</span>;</span><br><span class="line">        String s2 = s1.replace(<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;d&#x27;</span>);</span><br><span class="line">        System.out.println(s2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>String[] split(String):切割字符串，返回切割后的字符串数据，原字符串不变</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = <span class="string">&quot;abc abc abc&quot;</span>;</span><br><span class="line">        String[] s2 = s1.split(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s2.length; i++) &#123;</span><br><span class="line">            System.out.println(s2[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>String trim():去除字符串两端的空白字符</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = <span class="string">&quot; abc &quot;</span>;</span><br><span class="line">        String s2 = s1.trim();</span><br><span class="line">        System.out.println(s2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="StringBuilder和StringBuffer"><a href="#StringBuilder和StringBuffer" class="headerlink" title="StringBuilder和StringBuffer"></a>StringBuilder和StringBuffer</h3><p>简介：可变字符序列，用于构造字符对象。内部使用自动扩容的数组操作字符串数据。StringBuilder和StringBuffer使用相同的api。</p>
+<p>属于java.base-&gt;java.lang-&gt;StringBuilder&amp;StringBuffer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//将String类型的&quot;abc&quot;转换为StringBuilder类型的对象</span></span><br><span class="line">        StringBuilder sb1 = <span class="keyword">new</span> StringBuilder(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        <span class="comment">//测试成员方法：将三个字符串拼接成一个新的字符串</span></span><br><span class="line">        StringBuilder sb2 = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        sb2.append(<span class="string">&quot;h&quot;</span>);</span><br><span class="line">        sb2.append(<span class="string">&quot;j&quot;</span>);</span><br><span class="line">        sb2.append(<span class="string">&quot;z&quot;</span>);</span><br><span class="line">        String s1 = sb2.toString();</span><br><span class="line">        System.out.println(s1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Date类和Calendar类"><a href="#Date类和Calendar类" class="headerlink" title="Date类和Calendar类"></a>Date类和Calendar类</h2><p>属于java.base-&gt;java.util-&gt;Date/Calendar</p>
+<p>简介：日期和日历类，用于操作日期相关信息。</p>
+<h3 id="构造方法：-1"><a href="#构造方法：-1" class="headerlink" title="构造方法："></a>构造方法：</h3><ul>
+<li>Date():构造日期对象，当前系统时间，精确到毫秒</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//空参构造，创建当前时间对象</span></span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        System.out.println(date);</span><br><span class="line">        <span class="comment">//获取当前系统时间的毫秒值</span></span><br><span class="line">        <span class="keyword">long</span> date2 = date.getTime();</span><br><span class="line">        System.out.println(date2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Date(long):构造日期对象，时间自“1970年1月1日 00:00:00 GMT”起，至指定参数的毫秒数</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建指定时间</span></span><br><span class="line">        Date date = <span class="keyword">new</span> Date(<span class="number">1605236393823L</span>);</span><br><span class="line">        System.out.println(date);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="成员方法："><a href="#成员方法：" class="headerlink" title="成员方法："></a>成员方法：</h3><ul>
+<li>Long getTime():将日期对象转换成对应的时间毫秒</li>
+<li>static Calendar getInstance():根据当前系统时区和语言环境获取日历对象</li>
+<li>Int get(int field):分会给定日历字段的值</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建Calendar类型对象</span></span><br><span class="line">        Calendar calendar = Calendar.getInstance();</span><br><span class="line">        System.out.println(calendar);</span><br><span class="line">        <span class="comment">//获取年月日</span></span><br><span class="line">        <span class="keyword">int</span> year = calendar.get(Calendar.YEAR);</span><br><span class="line">        <span class="keyword">int</span> month = calendar.get(Calendar.MONTH);<span class="comment">//注意java中月是从0开始的</span></span><br><span class="line">        <span class="keyword">int</span> day = calendar.get(Calendar.DATE);</span><br><span class="line">        System.out.println(year+<span class="string">&quot;年&quot;</span> +(month+<span class="number">1</span>)+<span class="string">&quot;月&quot;</span> +day+<span class="string">&quot;日&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>void set(int field, int value):将给定的日历字段设置为指定的值</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建Calendar类型对象</span></span><br><span class="line">        Calendar calendar = Calendar.getInstance();</span><br><span class="line">        <span class="comment">//自己设置年月日</span></span><br><span class="line">        calendar.set(<span class="number">2021</span>,<span class="number">7</span>,<span class="number">11</span>);</span><br><span class="line">        <span class="comment">//获取年月日,并打印</span></span><br><span class="line">        <span class="keyword">int</span> year = calendar.get(Calendar.YEAR);</span><br><span class="line">        <span class="keyword">int</span> month = calendar.get(Calendar.MONTH);<span class="comment">//注意java中月是从0开始的</span></span><br><span class="line">        <span class="keyword">int</span> day = calendar.get(Calendar.DATE);</span><br><span class="line">        System.out.println(year+<span class="string">&quot;年&quot;</span> +(month+<span class="number">1</span>)+<span class="string">&quot;月&quot;</span> +day+<span class="string">&quot;日&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基本类型的包装类"><a href="#基本类型的包装类" class="headerlink" title="基本类型的包装类"></a>基本类型的包装类</h2><p>属于java.base-&gt;java.lang-&gt;包装类</p>
+<p>简介：基本数据类型不是对象，所以Java针对基本类型提供了对应的包装类，以对象形式来使用。</p>
+<p>使用步骤：</p>
+<ul>
+<li>装箱：基本类型转成包装类型。</li>
+<li>拆箱；包装（对象）类型转成基本类型</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JDK5以后的拆装箱写法</span></span><br><span class="line">        Integer int1 = <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">int</span> int2 = int1;</span><br></pre></td></tr></table></figure>
+<h3 id="成员方法：将字符串类型的数据转换成对应的基本类型"><a href="#成员方法：将字符串类型的数据转换成对应的基本类型" class="headerlink" title="成员方法：将字符串类型的数据转换成对应的基本类型"></a>成员方法：将字符串类型的数据转换成对应的基本类型</h3><ul>
+<li>static 基本类型 paresXXX(String):将字符串类型转换成基本数据类型</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//将字符串类型的10转换成int类型的10</span></span><br><span class="line">        String s = <span class="string">&quot;10&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> num = Integer.parseInt(s);</span><br><span class="line">        System.out.println(num);</span><br><span class="line">        <span class="comment">//打印测试：如果转换成功了则打印结果为20</span></span><br><span class="line">        System.out.println(<span class="string">&quot;num+10:&quot;</span> +(num+<span class="number">10</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：常用API</li>
+        <li>Post author：JiazhengHE</li>
+        <li>Create time：2020-05-26 12:12:57</li>
+        <li>
+            Post link：https://hjeremyz.github.io/2020/05/26/常用API/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/05/26/%E5%8F%8D%E5%B0%84/"
+                        >
+                            <span class="left arrow-icon flex-center" >
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java高级特性之反射</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/05/26/%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">对象和类（oop）</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                    
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span> -
+            
+            2021 <i class="fas fa-heart icon-animate"></i> <a href="/">JiazhengHE</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a class="theme-version" target="_blank"></a>
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+
+        
+
+        <!-- TOC aside toggle -->
+        
+
+    </ul>
+</div>
+
+    </div>
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-top flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="tools-ul-1">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+    </ul>
+</div>
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8API"><span class="nav-number">1.</span> <span class="nav-text">常用API</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">Object类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.1.</span> <span class="nav-text">构造方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Object()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.2.</span> <span class="nav-text">成员方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Int-hashCode"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">Int hashCode()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class-lt-gt-getClass"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">Class&lt;?&gt; getClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-toString"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">String toString()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean-equals"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">Boolean equals()</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scanner%E7%B1%BB"><span class="nav-number">1.2.</span> <span class="nav-text">Scanner类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">String类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.3.1.</span> <span class="nav-text">构造方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">成员方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">判断方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">获取方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">转换方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringBuilder%E5%92%8CStringBuffer"><span class="nav-number">1.3.3.</span> <span class="nav-text">StringBuilder和StringBuffer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date%E7%B1%BB%E5%92%8CCalendar%E7%B1%BB"><span class="nav-number">1.4.</span> <span class="nav-text">Date类和Calendar类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%EF%BC%9A-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">构造方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.4.2.</span> <span class="nav-text">成员方法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="nav-number">1.5.</span> <span class="nav-text">基本类型的包装类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%EF%BC%9A%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AF%B9%E5%BA%94%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.1.</span> <span class="nav-text">成员方法：将字符串类型的数据转换成对应的基本类型</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        
+    </aside>
+
+    <!-- image viewer -->
+    <div class="image-viewer-container">
+    <div class="img-box">
+        <img src="">
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/left-side-toggle.js"></script>
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/code-copy.js"></script>
+    
+
+    
+
+
+</body>
+</html>
